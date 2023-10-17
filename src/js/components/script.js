@@ -61,10 +61,10 @@ document.addEventListener('DOMContentLoaded', function() {
         }},
 
       //Бесконечное листание страниц
-      speed: 3000,//Интервал ожидания
+      speed: 1000,//Интервал ожидания
 
       autoplay: {
-        delay: 5000,//Интервал ожидания
+        delay: 3000,//Интервал ожидания
         disableOnInteraction: false,      
       },
 
