@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!--закрасить адресную строку и строку уведомлений в любой цвет.-->
+  <meta name="theme-color" content="#1f1f1f">
+  <!--Для поиска в сети-->
+  <meta name="description" content="Рады видеть Вас на нашем сайте.">
+  <meta property="og:title" content="Путь JavaScript">
+  <meta property="og:type" content="website">
+  <!-- здесь ссылка на сайт-->
+  <meta property="og:url" content="http://ссылка.ru/">
+  <!-- <meta property="og:image" content="картинка для поисковиков ссылка"> -->
+  <meta property="og:image" content="https:/ссылка.jpg">
+  <meta name="keywords" content="Путь JavaScript, books, книгиб цена, магазин, JavaScript">
+  <!-- // Для поиска в сети-->
+  <title>Путь JavaScript</title>
+  <link rel="preload" href="fonts/Consolas-Bold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/ArialMT-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/Arial-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/Consolas-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/Arial-Italic.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/OpenSans-Italic.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/Arial-BoldMT.woff2" as="font" type="font/woff2" crossorigin>
+  <!-- Link Swiper's CSS. здесь только ссылками работает слайдер-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
+  <script defer src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <!-- Swiper JS В галпе в папке ./scss/vendor и в файле vendor.scss-->
+  <!-- <link rel="stylesheet" href="css/swiper.css">-->
+  <!-- Дропдаун - Выбрать choices В галпе в папке ./scss/vendor и в файле vendor.scss-->
+  <!-- <link rel="stylesheet" href="css/choices.min.css">-->
+  <!-- Swiper JS В галпе в папке ./js/vendor и в файле vendor.js 
+  <script defer src="js/swiper.js"></script>-->
+  <!-- Дропдаун - Выбрать choices В галпе в папке ./js/vendor и в файле vendor.js -->
+  <!-- <script defer src="js/choices.min.js"></script> -->
+  <link rel="stylesheet" href="css/vendor.css">
+  <link rel="stylesheet" href="css/main.css">
+  <script defer src="js/main.js"></script>
+</head>
+
+<body class="page__body">
+  <div class="site-container">
+    <header class="header">
+  <div class="container"></div>
+</header>
+
+    <main class="main">
+      <!-- <picture>
+        <source srcset="img/cover.webp" type="image/webp">
+        <img loading="lazy" src="img/cover.jpg" class="image" width="300" height="300" alt="Обложка">
+      </picture> -->
+      <section class="hero">
+  <div class="hero__container _container">
+    <h2 class="hero__title h2">Путь JavaScript</h2>
+    <p class="hero__desc hero__desc_none1024 desc">Можно выделить три основных направления для прогресса JavaScript Middle…</p>
+    <div class="hero__img">
+      <img class="img" src="img/way-JavaScript-icon.jpg" alt="Книги по JavaScript">
+      <!-- Swiper -->
+      <div class="hero__swiper swiper-container">
+        <ul class="hero__list swiper-wrapper">
+          <li class="hero__item swiper-slide">
+            <picture>
+              <source srcset="./img/way-JavaScript-mobile.jpg" media="(max-width: 400px)">
+              <img src="./img/way-JavaScript-desktop.jpg" alt="Книги по JavaScript">
+            </picture>
+          </li>
+          <li class="hero__item swiper-slide">
+            <picture>
+              <source srcset="./img/way-JavaScript-mobile.jpg" media="(max-width: 400px)">
+              <img src="./img/way-JavaScript-desktop.jpg" alt="Книги по JavaScript">
+            </picture>
+          </li>
+          <li class="hero__item swiper-slide">
+            <picture>
+              <source srcset="./img/way-JavaScript-mobile.jpg" media="(max-width: 400px)">
+              <img src="./img/way-JavaScript-desktop.jpg" alt="Книги по JavaScript">
+            </picture>
+          </li>
+          <li class="hero__item swiper-slide">
+            <picture>
+              <source srcset="./img/way-JavaScript-mobile.jpg" media="(max-width: 400px)">
+              <img src="./img/way-JavaScript-desktop.jpg" alt="Книги по JavaScript">
+            </picture>
+          </li>
+        </ul>
+        <!-- <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>-->
+        <div class="hero__scrollbar swiper-scrollbar"></div>
+        <!-- <div class="swiper-pagination"></div>  -->
+      </div>
+    </div>
+    <p class="hero__desc hero__desc_none400 desc">Можно выделить три основных направления для прогресса JavaScript</p>
+    <hr>
+  </div>
+</section>
+      <section class="quote">
+  <div class="quote__container _container">
+    <h2 class="quote__title h2">Серверный JavaScript</h2>
+    <div class="quote__text">
+      <p class="quote__desc desc">
+        Разработчики и клиенты часто неправильно понимают, что такое система. Они видят графический интерфейс и думают, что он и есть система. Они определяют систему в терминах графического интерфейса и считают, что должны сразу начать работу с графическим интерфейсом. Они не понимают важнейшего принципа: ввод/вывод не важен.
+      </p>
+      <span class="quote__span">
+        — Р. Мартин
+      </span>
+    </div>
+  </div>
+</section>
+      <section class="ad">
+  <div class="ad__container _container">
+    <h2 class="ad__visually visually-hidden">Я для семантики</h2>
+    <div class="ad__title">Реклама на
+      <a class="ad__link" href="https://blabla.com" target="blank" aria-label="blabla">blabla.com</a>
+    </div>
+    <div class="ad__img">
+      <!-- Таким вариантом лучше не делать на слайдере, ломает суть слайдера -->
+      <picture>
+        <source srcset="img/books-mobile.webp" type="image/webp"  media="(max-width: 400px)">
+        <source  loading="lazy" srcset="img/books-mobile.jpg" media="(max-width: 400px)">
+        <source srcset="img/books-desktop.webp" type="image/webp">
+        <img loading="lazy" src="img/books-desktop.jpg" class="image" width="300" height="300" alt="Книги по JavaScript">
+      </picture>
+    </div>
+  </div>
+</section>
+      <section class="conclusion">
+  <div class="conclusion__container _container">
+    <h2 class="conclusion__title h2">Заключение</h2>
+    <p class="conclusion__desc desc">
+      Синхрония осознаёт сюжетный верлибр. Мифопорождающее текстовое устройство диссонирует лирический субъект. Абстрактное высказывание пространственно просветляет деструктивный символ. Ямб, несмотря на то, что все эти характерологические черты отсылают не к единому образу нарратора, интегрирует мифопоэтический хронотоп. Действительно, ударение приводит палимпсест. Контрапункт приводит ритм.
+    </p>
+  </div>
+</section>
+      <section class="contact">
+  <div class="contact__container _container">
+    <h2 class="contact__title h2">Оцените статью</h2>
+    <div class="contact__star star"><!--Общий класс для прижатия к краю-->
+      <img class="star__rating star__rating_yellow" src="img/icon-star.svg" alt="Рейтинг статьи 4 из 5">
+      <img class="star__rating star__rating_yellow" src="img/icon-star.svg" alt="">
+      <img class="star__rating star__rating_yellow" src="img/icon-star.svg" alt="">
+      <img class="star__rating star__rating_yellow" src="img/icon-star.svg" alt="">
+      <img class="star__rating star__rating_gray" src="img/icon-star-gray.svg" alt="">
+    </div>
+    <h3 class="contact__h3 h3">
+      Добавить комментарий к книге
+    </h3>
+    <div class="contact__form">
+      <form action="#" class="contact__form form">
+        <input type="hidden" name="admin_email[]" value="darki@yandex.ru">
+        <input type="hidden" name="form_subject" value="Тема письма">
+        <div class="contact__block">
+          <!--data здесь он обрабатывает плагин валидатор кода-->
+          <label class="contact__label">
+            <span class="label-hiden">Введите</span>
+            <input class="contact__input" type="text" name="name" placeholder="Имя" data-validate-field="name" maxlength="10">
+          </label>
+          <label class="contact__label">
+            <span class="label-hiden">Введите</span>
+            <input class="contact__input" type="email" name="email" placeholder="E-mail"
+              data-validate-field="email" id="email" aria-label="Введите вашу почту" maxlength="35">
+          </label>
+          <div class="contact__select" name="select">
+            <!-- Дропдаун - Категория id="selectCustom"my-select-->
+            <select class="contact__сategories-select  select" id="choices" name="select"  aria-label="Выбрать мебель">
+              <option value="">Выберите книгу</option>
+              <option>JavaScript ниндзя</option>
+              <option>Pragmatic Guide to JavaScript</option>
+              <option>Pro JavaScript Techniques</option>
+              <option>Выразительный JavaScript</option>
+            </select>
+          </div>
+          <label class="contact__label contact__label_textarea">
+            <span class="label-hiden">Введите</span>
+            <textarea class="contact__input contact__input_textarea" type="text" name="message" placeholder="Ваш отзыв" maxlength="1000"></textarea>
+          </label>
+        </div>
+        <button class="contact__button btn" type="submit" value="Заказать фотосессию">
+          Отправить
+        </button>
+      </form>
+    </div>
+  </div>
+</section>
+      <section class="post">
+  <div class="post__container _container">
+    <h2 class="post__title h2">
+      Похожие посты
+    </h2>
+    <!-- Swiper POST-->
+    <div class="post__swiper swiper-container">
+      <ul class="post__list swiper-wrapper">
+        <li class="post__item swiper-slide">
+          <div class="post__img">
+            <img src="img/img-post/01.jpg" alt="картинка-1">
+          </div>
+          <p class="post__desc desc">
+            События жизненного цикла ReactJS
+          </p>
+        </li>
+        <li class="post__item swiper-slide">
+          <div class="post__img">
+            <img src="img/img-post/02.jpg" alt="картинка-2">
+          </div>
+          <p class="post__desc desc">
+            CSS Grids. Полное руководство
+          </p>
+        </li>
+        <li class="post__item swiper-slide">
+          <div class="post__img">
+            <img src="img/img-post/03.jpg" alt="картинка-3">
+          </div>
+          <p class="post__desc desc">
+            Асинхронность в JavaScript
+          </p>
+        </li>
+      </ul>
+      <div class="post__pagination swiper-pagination"></div>
+    </div>
+  </div>
+</section>
+
+    </main>
+    <footer class="footer">
+  <div class="container"></div>
+</footer>
+
+  </div>
+</body>
+
+</html>

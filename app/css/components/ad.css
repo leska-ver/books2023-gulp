@@ -1,0 +1,45 @@
+@charset "UTF-8";
+/* stylelint-disable */
+/*** Блок реклама ad-1024 ***/
+.ad {
+  padding: 35px 0;
+  background-color: var(--color-gallery);
+}
+.ad__title {
+  margin-bottom: 16px;
+  padding-left: 65px;
+  font-family: "Helvetica", sans-serif;
+  font-size: 14px;
+  line-height: 18px; /* 128.571% */
+}
+.ad__link {
+  color: var(--color-blueRibbon35);
+  font-family: "Helvetica", sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  -webkit-text-decoration-line: underline;
+  text-decoration-line: underline;
+}
+.ad__img img {
+  width: 610px;
+  margin: 0 auto;
+}
+
+/*** // Блок реклама ad-1024 ***/
+@media (max-width: 888px) {
+  /*888*/
+}
+@media (max-width: 575px) {
+  /*575*/
+  .ad {
+    padding: 25px 0 20px;
+  }
+  .ad__title {
+    margin-bottom: 11px;
+    padding-left: 0;
+  }
+}
+@media (max-width: 400px) {
+  /*400*/
+}
+/*# sourceMappingURL=ad.css.map */

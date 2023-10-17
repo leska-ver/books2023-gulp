@@ -1,0 +1,57 @@
+@charset "UTF-8";
+/* stylelint-disable */
+/*** Серверный JavaScript quote-1024 ***/
+.quote {
+  padding: 11px 0 44px;
+}
+.quote__text {
+  position: relative;
+  padding: 10px 0 0 59px;
+}
+.quote__text::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: url("../img/quotation-mark.png") center/cover no-repeat;
+  width: 35px;
+  height: 35px;
+}
+.quote__desc {
+  margin: 0 0 27px;
+  font-family: "OpenSans", sans-serif;
+  font-size: clamp(14px, 4vw, 18px);
+  line-height: 24px; /* 133.333% */
+  color: var(--color-codGray);
+}
+.quote__span {
+  color: var(--color-doveGray);
+  font-family: "OpenSans", sans-serif;
+  font-size: clamp(14px, 4vw, 16px);
+  line-height: 24px;
+}
+
+/*** // Серверный JavaScript quote-1024 ***/
+@media (max-width: 888px) {
+  /*888*/
+}
+@media (max-width: 575px) {
+  /*575*/
+  .quote {
+    padding: 5px 0 53px;
+  }
+  .quote__text {
+    padding: 7px 0 0 53px;
+  }
+  .quote__title {
+    margin-bottom: 13px;
+  }
+  .quote__desc {
+    margin-bottom: 22px;
+    line-height: 20px;
+  }
+}
+@media (max-width: 400px) {
+  /*400*/
+}
+/*# sourceMappingURL=quote.css.map */

@@ -1,0 +1,37 @@
+@charset "UTF-8";
+/* stylelint-disable */
+/*** Заключение conclusion-1024 ***/
+.conclusion {
+  padding: 21px 0 56px;
+}
+.conclusion__title {
+  margin-bottom: 30px;
+}
+.conclusion__desc {
+  font-family: "ArialMT", sans-serif;
+  font-size: clamp(14px, 4vw, 16px);
+  line-height: 24px; /* 150% */
+  color: var(--color-shark);
+}
+
+/*** // Заключение conclusion-1024 ***/
+@media (max-width: 888px) {
+  /*888*/
+}
+@media (max-width: 575px) {
+  /*575*/
+  .conclusion {
+    padding: 5px 0 16px;
+  }
+  .conclusion__title {
+    margin-bottom: 25px;
+    font-size: 21px;
+  }
+  .conclusion__desc {
+    line-height: 18px;
+  }
+}
+@media (max-width: 400px) {
+  /*400*/
+}
+/*# sourceMappingURL=conclusion.css.map */

@@ -1,0 +1,120 @@
+@charset "UTF-8";
+/* stylelint-disable */
+/*** Путь JavaScript hero-1024***/
+.hero {
+  padding: 43px 0 10px;
+}
+.hero__container {
+  /* Для слайдера */
+  overflow: hidden;
+}
+.hero__title {
+  position: relative;
+  margin-bottom: 73px;
+  font-weight: 700;
+  font-size: clamp(23px, 5vw, 48px);
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  color: var(--color-blueRibbon);
+  text-align: center;
+}
+.hero__title::before {
+  left: 0;
+}
+.hero__title::before, .hero__title::after {
+  content: "";
+  position: absolute;
+  top: 14px;
+  width: 19.5%;
+  height: 1px;
+  background-color: var(--color-alto);
+}
+.hero__title::after {
+  right: 0;
+}
+.hero__img {
+  position: relative;
+  margin-bottom: 21px;
+}
+.hero__swiper {
+  display: none;
+  width: 100%;
+  overflow: hidden;
+}
+.hero__list {
+  margin: 0;
+  padding: 0;
+}
+.hero__item.swiper-slide {
+  height: auto;
+}
+.hero__item.swiper-slide img {
+  display: block;
+  height: 100%;
+  /*По РР, но она накладывает картинки друг на друга.
+  max-width: inherit;*/
+}
+.hero__scrollbar.swiper-horizontal > .swiper-scrollbar, .hero__scrollbar.swiper-scrollbar.swiper-scrollbar-horizontal {
+  bottom: -18px;
+  left: -2px;
+  width: calc(100% + 1.5 * var(--swiper-scrollbar-sides-offset, 1%));
+}
+.hero__desc {
+  margin-bottom: 49px;
+  font-family: "Arial-Italic", sans-serif;
+}
+.hero__desc_none1024 {
+  display: none;
+}
+
+/*** // Путь JavaScript hero-1024 ***/
+@media (max-width: 888px) {
+  /*888*/
+  .hero__title {
+    margin-bottom: 53px;
+  }
+}
+@media (max-width: 575px) {
+  /*575*/
+  .hero {
+    padding: 15px 0 5px;
+  }
+  .hero__title {
+    margin-bottom: 33px;
+  }
+  .hero__desc {
+    margin-bottom: 33px;
+  }
+}
+@media (max-width: 400px) {
+  /*400*/
+  ._container {
+    padding: 0 20px;
+  }
+  .hero__container hr {
+    display: none;
+  }
+  .hero__title {
+    margin-bottom: 36px;
+  }
+  .hero__title::before, .hero__title::after {
+    top: 18px;
+    width: 10.5%;
+  }
+  .hero__desc_none1024 {
+    display: block;
+    margin-bottom: 25px;
+  }
+  .hero__img .img {
+    display: none;
+  }
+  .hero__swiper {
+    display: block;
+  }
+  .hero__item.swiper-slide {
+    height: 300px;
+  }
+  .hero__desc_none400 {
+    display: none;
+  }
+}
+/*# sourceMappingURL=hero.css.map */
