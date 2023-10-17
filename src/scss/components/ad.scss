@@ -1,0 +1,48 @@
+@import "../mixins/_breakpoint.scss";
+
+/*** Блок реклама ad-1024 ***/
+.ad {
+  padding: 35px 0;
+  background-color: var(--color-gallery);
+    
+  &__title {
+    margin-bottom: 16px;
+    padding-left: 65px;
+    font-family: 'Helvetica', sans-serif;
+    font-size: 14px;
+    line-height: 18px; /* 128.571% */
+  }
+
+  &__link {
+    color: var(--color-blueRibbon35);
+    font-family: 'Helvetica', sans-serif;
+    font-size: 14px;
+    line-height: 18px;
+    text-decoration-line: underline;
+  }
+
+  &__img img {
+    width: 610px;
+    margin: 0 auto;
+  }
+}
+/*** // Блок реклама ad-1024 ***/
+
+@include desktop {/*888*/ 
+
+}
+
+@include tablet {/*575*/ 
+  .ad {
+    padding: 25px 0 20px;
+
+    &__title {
+      margin-bottom: 11px;
+      padding-left: 0;
+    } 
+  } 
+}
+
+@include mobile {/*400*/ 
+
+}

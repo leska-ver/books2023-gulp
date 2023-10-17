@@ -1,0 +1,17 @@
+<section class="ad">
+  <div class="ad__container _container">            
+    <h2 class="ad__visually visually-hidden">Я для семантики</h2>
+    <div class="ad__title">Реклама на 
+      <a class="ad__link" href="https://blabla.com" target="blank" aria-label="blabla">blabla.com</a>
+    </div>
+    <div class="ad__img">
+      <!-- Таким вариантом лучше не делать на слайдере, ломает суть слайдера -->
+      <picture>
+        <source srcset="img/books-mobile.webp" type="image/webp"  media="(max-width: 400px)">
+        <source  loading="lazy" srcset="img/books-mobile.jpg" media="(max-width: 400px)">
+        <source srcset="img/books-desktop.webp" type="image/webp">
+        <img loading="lazy" src="img/books-desktop.jpg" class="image" width="300" height="300" alt="Книги по JavaScript">
+      </picture>
+    </div>            
+  </div>
+</section>

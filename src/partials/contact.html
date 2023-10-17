@@ -1,0 +1,50 @@
+<section class="contact">
+  <div class="contact__container _container">            
+    <h2 class="contact__title h2">Оцените статью</h2>
+    <div class="contact__star star"><!--Общий класс для прижатия к краю-->
+      <img class="star__rating star__rating_yellow" src="img/icon-star.svg" alt="Рейтинг статьи 4 из 5">
+      <img class="star__rating star__rating_yellow" src="img/icon-star.svg" alt="">
+      <img class="star__rating star__rating_yellow" src="img/icon-star.svg" alt="">
+      <img class="star__rating star__rating_yellow" src="img/icon-star.svg" alt="">
+      <img class="star__rating star__rating_gray" src="img/icon-star-gray.svg" alt="">
+    </div>
+    <h3 class="contact__h3 h3">
+      Добавить комментарий к&nbsp;книге
+    </h3>
+    <div class="contact__form">
+      <form action="#" class="contact__form form">
+        <input type="hidden" name="admin_email[]" value="darki@yandex.ru">
+        <input type="hidden" name="form_subject" value="Тема письма">
+        <div class="contact__block">
+          <!--data здесь он обрабатывает плагин валидатор кода-->
+          <label class="contact__label">                    
+            <span class="label-hiden">Введите</span>
+            <input class="contact__input" type="text" name="name" placeholder="Имя" data-validate-field="name" maxlength="10">
+          </label>
+          <label class="contact__label">                    
+            <span class="label-hiden">Введите</span>
+            <input class="contact__input" type="email" name="email" placeholder="E-mail"
+              data-validate-field="email" id="email" aria-label="Введите вашу почту" maxlength="35">
+          </label>
+          <div class="contact__select" name="select">
+            <!-- Дропдаун - Категория id="selectCustom"my-select-->
+            <select class="contact__сategories-select  select" id="choices" name="select"  aria-label="Выбрать мебель">
+              <option value="">Выберите книгу</option>
+              <option>JavaScript ниндзя</option>
+              <option>Pragmatic Guide to JavaScript</option>
+              <option>Pro JavaScript Techniques</option>
+              <option>Выразительный JavaScript</option>
+            </select>
+          </div>
+          <label class="contact__label contact__label_textarea">
+            <span class="label-hiden">Введите</span>
+            <textarea class="contact__input contact__input_textarea" type="text" name="message" placeholder="Ваш отзыв" maxlength="1000"></textarea>
+          </label>
+        </div>
+        <button class="contact__button btn" type="submit" value="Заказать фотосессию">
+          Отправить
+        </button>
+      </form>
+    </div> 
+  </div>  
+</section> 

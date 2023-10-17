@@ -1,0 +1,220 @@
+html {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  -o-box-sizing: inherit;
+  -ms-box-sizing: inherit;
+  box-sizing: border-box;
+}
+
+*, 
+*::before, 
+*::after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  -o-box-sizing: inherit;
+  -ms-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+html,
+body {
+  /*Для .wrapper Это будет нужно для footer*/
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100%;
+  font-family: 'Consolas', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1;
+  color: var(--color-black);
+  background-color: var(--color-gulfStream);
+}
+
+img {
+  vertical-align: top;
+  max-width: 100%;
+}
+
+img, svg {
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #84aaad; /* Цвет посещенных ссылок */
+}
+
+h1,
+h2,
+h3,
+p,
+a {
+  /*перенос слов*/
+  word-wrap: break-word;
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  background-color: transparent;  
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+
+
+/*Цвет для всех форм инпутов*/
+::placeholder {
+  color: var(--color-boulder);
+}
+/*-//- Цвет для всех форм инпутов*/
+
+textarea {
+  resize: none;
+}
+
+.wrapper {    
+  min-height: 100%;
+  overflow: hidden;
+}
+
+/* Для семантики если нет заголовка h1 в вёрстке. Ставим скрытый заголовок. */
+.visually-hidden {
+  position: absolute;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  width: 1px;
+  height: 1px;
+  clip: rect(0, 0, 0, 0);
+  overflow: hidden;
+}
+
+._container {
+  margin: 0 auto;
+  padding: 0 50px;
+  /*840px = 740px + 50px + 50px не менять. PP в браузере картинка-1024*/
+  max-width: 840px;
+}
+
+.h2 {
+  color: var(--color-black);
+  font-size: clamp(23px, 5vw, 28px);
+  line-height: 36px; /* 128.571% */
+}
+
+.h3 {  
+  font-size: clamp(16px, 5vw, 18px);
+}
+
+.desc {
+  color: var(--color-dune);
+  font-family: 'Arial', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px; /* 128.571% */
+}
+
+.btn {
+  /*position: relative; Не ставить! Его(бургера меню) потом кнопка не видит.*/
+  position: relative;
+  padding: 14px 69px;
+  border-radius: 2px;
+  border: 1px solid var(--color-blueRibbon);
+  height: max-content;
+  font-family: 'ArialMT', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1;
+  color: var(--color-white);
+  background-color: var(--color-blueRibbon);
+  cursor: pointer;
+  text-transform: uppercase;   
+  -webkit-transition: border .3s ease-in-out, background-color .3s ease-in-out;
+  -moz-transition: border .3s ease-in-out, background-color .3s ease-in-out;
+  -ms-transition: border .3s ease-in-out, background-color .3s ease-in-out;
+  -o-transition: border .3s ease-in-out, background-color .3s ease-in-out;
+  transition: border .3s ease-in-out, background-color .3s ease-in-out;
+
+  &:focus {
+    border: 1px solid transparent;
+    background-color: var(--color-black);
+    outline: none;
+  }
+
+  &:hover {
+    border: 1px solid transparent;
+    background-color: var(--color-boulder);
+  }
+
+  &:active {
+    opacity: .7;
+  }
+}
+
+/*Шаблон звёзд*/
+.star {
+  display: flex;
+
+  &__rating {
+    display: inline;
+
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+  }
+}    
+/* // Шаблон звёзд*/
+
+.label-hiden {
+  position: absolute;
+  left: -101%;
+  width: 100%;
+  opacity: 0;
+}
+
+/*** Дропдаун - Выбрать ***/
+/*Селект. Убрала надпись Press to select*/
+.choices__list--dropdown .choices__item--selectable.is-highlighted:after {
+  display: none;
+}
+
+/*Названия в option стали горизонтальными*/
+.choices__list--dropdown .choices__item--selectable {
+  padding: 11px;
+  font-family: 'ArialMT', sans-serif;
+  font-size: 14px;
+}
+
+/*Чтобы в is-open и в select-one стрелка не прыгала. Прыгает у тех кто имеет свою иконку*/
+.choices[data-type*=select-one].is-open::after,
+.choices[data-type*=select-one]:after {
+  margin-top: 0;
+}
+
+/* Перебив библиотечных стиль .contact__сategories-select*/
+.choices__placeholder {
+  opacity: 1;
+}
+
+/*Изчеснит с option-ом выбраный объект. С .choices__placeholder эфект лучше работает*/
+.form .choices__list .choices__item.is-selected, .form .choices__list.choices__list--dropdown .choices__placeholder {
+  display: none; 
+}
+/*** // Дропдаун - Выбрать ***/
+
+
+@include mobile {/*400px*/
+  ._container {
+    padding: 0 20px;
+  }  
+}

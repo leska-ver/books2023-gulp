@@ -1,0 +1,40 @@
+@import "../mixins/_breakpoint.scss";
+
+/*** Заключение conclusion-1024 ***/
+.conclusion {
+  padding: 21px 0 56px;
+
+  &__title {
+    margin-bottom: 30px;
+  }
+
+  &__desc {
+    font-family: 'ArialMT', sans-serif;
+    font-size: clamp(14px, 4vw, 16px);
+    line-height: 24px; /* 150% */
+    color: var(--color-shark);
+  }
+}
+/*** // Заключение conclusion-1024 ***/
+
+@include desktop {/*888*/ 
+
+}
+
+@include tablet {/*575*/ 
+  .conclusion {
+    padding: 5px 0 16px;
+
+    &__title {
+      margin-bottom: 25px;
+      font-size: 21px;
+    }
+
+    &__desc {
+      line-height: 18px;
+    }
+  }
+}
+
+@include mobile {/*400*/ 
+}

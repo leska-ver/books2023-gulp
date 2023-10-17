@@ -1,0 +1,246 @@
+@import "../mixins/_breakpoint.scss";
+
+/*** Контакт contact-1024 ***/
+.contact {
+  padding: 15px 0 40px;
+  background-color: var(--color-gallery);
+
+  &__title {
+    margin-bottom: 2px;
+    font-family: 'Consolas', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--color-shark);
+  }
+
+  &__star {
+    margin-bottom: 30px;
+  }
+
+  /*---Телефон валидация и маска---*/
+  &__block {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 19px 30px;
+    margin-bottom: 21px;
+  }
+
+  &__form-input {
+    margin-bottom: 18px;
+  }
+
+  &__label {
+    /*общий*/
+    position: relative;
+
+    /* &:not(:first-child) .js-validate-error-label {
+      display: none;
+    } */
+
+    & .js-validate-error-label {
+      top: -60%;
+      display: block;
+      font-weight: 600;
+      font-size: clamp(18px, 3vw, 25px);
+      -webkit-text-stroke: 0.5px rgba(0, 0, 0, .5);
+    }
+
+    &_textarea {
+      grid-column: span 3;
+      grid-row: span 2;
+      border-radius: 6px;
+      background-color: #fff;
+    }
+  }
+
+  &__input {
+    padding: 15px 18px;
+    border-radius: 6px;
+    border: 2px solid transparent;
+    width: 100%;
+    height: 100%;
+    font-family: 'ArialMT', sans-serif;
+    font-size: 14px;
+    color: var(--color-mineShaft);
+    -webkit-transition: background-color .4s ease-in-out;
+    -moz-transition: background-color .4s ease-in-out;
+    -ms-transition: background-color .4s ease-in-out;
+    -o-transition: background-color .4s ease-in-out;
+    transition: background-color .4s ease-in-out;
+
+    &:focus {
+      outline: none;
+      border: 2px solid var(--color-gray);
+    }
+
+    &:hover {
+      border: 2px solid var(--color-doveGray);
+      background-color: var(--color-gallery);
+    }
+
+    &:active {
+      opacity: .7;
+    } 
+  }
+
+  /*---contact__сategories-select Дропдаун - Выбрать---*/
+  &__select .choices {
+    position: relative;
+    border-radius: 6px;
+    z-index: 10;
+  }
+
+  /*Отключаем в браузере, чтобы заморозит блок для стилизации*/ 
+  /*.choices {
+    overflow: hidden; 
+    overflow: inherit;
+  }
+  .choices__list--dropdown {*/ 
+    /*visibility: hidden;невидимый*
+    visibility: inherit;/*видимый
+  }*/
+
+  &__select .choices__inner {
+    position: relative;
+    padding: 13px;
+    background-color: var(--color-white);
+    border-radius: 6px;
+    border: 2px solid var(--color-white);
+    min-height: auto;
+    z-index: 10;
+  }
+
+  &__select .choices[data-type*=select-one] .choices__inner {
+    padding: 12px;
+  }
+
+  &__select .choices__list--dropdown {
+    margin-top: 9px;
+    box-shadow: 0px 2px 15px 0px rgba(154, 154, 154, 0.50);
+    background: var(--color-white);
+  }
+
+  &__select .choices__list--dropdown .choices__item--selectable {
+    padding: 16px 11px 16px 17px;
+    border-left: 6px solid transparent;
+  }
+
+  &__select .choices__list--dropdown .choices__item--selectable:after {
+    /*Запись убрала в select-e*/
+    content: attr(data-select-text);
+    display: none;
+  }
+
+  /*cтрелка-селект библиотечная*/
+  &__select .choices[data-type*=select-one]:after {
+    content: "";
+    top: 21px;
+    right: 21px;
+    width: 11px;
+    height: 7px;
+    border: none;
+    /*Удалили от предыдущей стрелки*/
+    background: url("../img/icon-arrow.svg") center / cover no-repeat;
+    z-index: 12;
+  }
+
+  &__select .choices[data-type*=select-one].is-open:after {
+    top: 21px;
+    right: 21px;
+    transform: rotate(180deg);
+  }
+
+  &__select .choices[data-type*=select-one].is-open:after {
+    background: url("../img/icon-arrow.svg") center / cover no-repeat;
+  }
+  /*конец cтрелка-селект*/
+
+  &__select .is-focused {
+    /*focus-hover-active С бордером прыгает*/
+    outline: 2px solid var(--color-gray);
+  }
+
+  &__select .is-open .choices__inner {
+    border-radius: 6px;
+  }
+
+  &__select .choices__list--dropdown .choices__item--selectable.is-highlighted {
+    background-color: var(--color-gallery);
+    border-left: 6px solid var(--color-blueRibbon);
+  }
+
+  &__select .choices__placeholder {
+    font-family: 'ArialMT', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: var(--color-boulder);
+    background-color: var(--white-color);
+    opacity: inherit;
+  }
+  /*--- // contact__сategories-select Дропдаун - Выбрать---*/
+  /*--- // Телефон валидация и маска---*/
+}
+
+/*** // Контакт contact-1024 ***/
+
+@include desktop {/*888*/ 
+  .contact__block {
+    grid-template-columns: repeat(2, 1fr);    
+    grid-template-rows: repeat(4, 1fr);
+    gap: 18px;
+  }
+
+  .contact__select {
+    grid-column: span 2;
+  }
+
+  .contact__label_textarea {
+    grid-column: span 2;
+  }
+}
+
+@include tablet {/*575*/ 
+  .contact {
+    padding: 14px 0 40px; 
+
+    &__block {
+      grid-template-columns: repeat(1, 1fr);
+      grid-template-rows: repeat(5, 48px);
+      gap: 13px;
+      margin-bottom: 17px;
+    }
+
+    &__title {
+      margin-bottom: 7px;
+    } 
+    
+    &__star {
+      margin-bottom: 22px;
+    }
+
+    &__h3 {
+      margin-bottom: 13px;
+    } 
+
+    &__input {
+      padding-top: 13px;
+    }  
+
+    &__input_textarea {
+      height: 115px;
+    }
+
+    &__select, &__label_textarea {
+      grid-column: span 1;
+    }
+
+    &__button {
+      width: 100%;
+    }
+  }
+}
+
+@include mobile {/*400*/ 
+
+}
